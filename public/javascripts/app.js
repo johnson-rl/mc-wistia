@@ -68,14 +68,9 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _jquery = __webpack_require__(3);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+	var $ = __webpack_require__(3);
 	var Observer = __webpack_require__(4).default;
 
 	var VideoSetting = function () {
@@ -135,7 +130,7 @@
 	        }
 	      }
 	    };
-	    _jquery2.default.extend(this.settings.options, opts);
+	    $.extend(this.settings.options, opts);
 	    this.onReady = new Observer();
 	    this.onPlay = new Observer();
 	    this.onEnd = new Observer();
