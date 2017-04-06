@@ -1,0 +1,21 @@
+{
+  "name": "mc-video",
+  "description": "Video wrapper for wistia",
+  "main": "public/javascripts/app.js",
+  "authors": [
+    "Jesse Ocon <jesse@masterclass.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "wistia"
+  ],
+  "homepage": "https://github.com/vigetlabs/gulp-starter",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
