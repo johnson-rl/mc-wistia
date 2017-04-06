@@ -1,4 +1,5 @@
-var $ = require('../../../node_modules/jquery/dist/jquery')
+import $ from 'jquery';
+//var $ = require('jquery/dist/jquery')
 const Observer = require('./observer').default
 
 export default class VideoSetting {
