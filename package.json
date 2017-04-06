@@ -1,15 +1,15 @@
 {
-  "name": "mc-wistia",
+  "name": "@masterclass/mc-wistia",
   "version": "0.0.2",
   "description": "A wistia wrapper built on top of the full featured configurable gulp asset pipeline and static site builder by Viget Labs",
   "engines": {
     "node": ">=0.12.0 ~5.9.0",
     "npm": ">=2.14.12 ~3.7.3"
   },
-  "homepage": "http://code.viget.com/gulp-starter/",
+  "homepage": "https://github.com/yankaindustries/mc-wistia",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vigetlabs/gulp-starter.git"
+    "url": "git@github.com:yankaindustries/mc-wistia.git"
   },
   "scripts": {
     "start": "gulp",

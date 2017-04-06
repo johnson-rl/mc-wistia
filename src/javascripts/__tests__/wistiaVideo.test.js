@@ -14,6 +14,112 @@ describe('VideoSetting', () => {
     video = {}
   })
 
+  describe("#duration", () => {
+    describe('before video loaded', () => {
+      var stub
+      var wistiaVideo
+      beforeEach(() => {
+        wistiaVideo = new __WistiaVideo__('abc')
+        stub = sinon.stub(wistiaVideo, 'videoIsLoaded')
+        stub.returns(false)
+      })
+      afterEach(() => {
+        stub.reset()
+      })
+      it("should return undefined", () => {
+        expect(wistiaVideo.duration()).to.be.undefined
+      })
+    }) 
+
+    describe("after video loaded", () => {
+      var stub
+      var wistiaVideo
+      beforeEach(() => {
+        wistiaVideo = new __WistiaVideo__('abc')
+        wistiaVideo.video = {
+          duration: function() {
+            return 10;
+          }
+        }
+        stub = sinon.stub(wistiaVideo, 'videoIsLoaded')
+        stub.returns(true)
+      })
+      afterEach(() => {
+        stub.reset()
+        wistiaVideo.video = undefined
+      })
+      it("should return the correct duration", () => {
+        expect(wistiaVideo.duration()).to.equal(10)
+      })
+    })
+  })
+  describe("#hashedId", () => {
+    describe("before video loaded", () => {
+      var wistiaVideo
+      var stub
+      beforeEach(() => {
+        wistiaVideo = new __WistiaVideo__('abc')
+      })
+      afterEach(() => {
+      })
+      it("should return undefined", () => {
+        expect(wistiaVideo.hashedId()).to.be.undefined
+      })
+    })
+    describe("after video loaded", () => {
+      var wistiaVideo
+      beforeEach(() => {
+        wistiaVideo = new __WistiaVideo__('abc')
+        wistiaVideo = {
+          hashedId: function() {
+            return 'abc'
+          }
+        }
+      })
+      afterEach(() => {
+        wistiaVideo.video = undefined
+      })
+      it("should return undefined", () => {
+        expect(wistiaVideo.hashedId()).to.equal('abc')
+      })
+      
+    })
+  })
+  describe('#playbackRate', () => {
+
+  })
+  describe('#replaceWith', () => {
+    var wistiaVideo
+    beforeEach(() => {
+      wistiaVideo = new __WistiaVideo__('abc')
+    })
+    describe("before video is loaded", () => {
+      it("should be undefined", () => {
+        expect(wistiaVideo.replaceWith('cde')).to.be.undefined
+      })
+    })
+
+    describe("after video is loaded", () => {
+      var stub
+      beforeEach(() => {
+        wistiaVideo.video = {
+          replaceWith: function() {
+
+          }
+        }
+        stub = sinon.stub(wistiaVideo.video, 'replaceWith')
+      })
+      afterEach(() => {
+        stub.reset()
+      })
+      it("should call wistias replace function", () => {
+        wistiaVideo.replaceWith()
+        assert(wistiaVideo.video.replaceWith.calledOnce)
+      })
+
+    })
+  })
+
   describe('#constructor', () => {
     var wistiaVideo
     describe('when passing in a plugin', () => {
@@ -185,4 +291,5 @@ describe('VideoSetting', () => {
       })
     })
   })
+
 })
