@@ -1,9 +1,9 @@
 {
   "name": "@masterclass/mc-wistia",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A wistia wrapper built on top of the full featured configurable gulp asset pipeline and static site builder by Viget Labs",
   "engines": {
-    "node": ">=0.12.0 ~5.9.0",
+    "node": ">=0.12.0 ~6.9.0",
     "npm": ">=2.14.12 ~3.7.3"
   },
   "homepage": "https://github.com/yankaindustries/mc-wistia",
