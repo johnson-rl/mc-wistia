@@ -74,6 +74,9 @@ module.exports = function(env) {
     if(rev) {
       webpackConfig.plugins.push(new webpackManifest(publicPath, config.root.dest))
     }
+    webpackConfig.externals = {
+      jquery: 'jQuery'
+    };
     webpackConfig.plugins.push(
       new webpack.DefinePlugin({
         'process.env': {
