@@ -81,9 +81,6 @@
     "webpack-hot-middleware": "2.10.0"
   },
   "license": "MIT",
-  "peerDependencies": {
-    "jquery": "^3.2.1"
-  },
   "dependencies": {
     "normalize.css": "^4.0.0"
   }
