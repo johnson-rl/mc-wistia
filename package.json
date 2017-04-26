@@ -1,6 +1,6 @@
 {
   "name": "@masterclass/mc-wistia",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "public/javascripts/app.js",
   "description": "A wistia wrapper built on top of the full featured configurable gulp asset pipeline and static site builder by Viget Labs",
   "engines": {
