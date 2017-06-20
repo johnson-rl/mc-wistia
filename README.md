@@ -9,6 +9,22 @@ npm start
 npm install
 ```
 
+### Install into another application
+
+```
+npm install git+ssh://git@github.com:yankaindustries/mc-wistia.git --save
+```
+
+You should see the following line in your package.json:
+
+```
+"dependencies": {
+    "@masterclass/mc-wistia": "git+ssh://git@github.com/yankaindustries/mc-wistia.git",
+    ...
+  }
+```
+
+
 #### Run development tasks:
 ```
 npm start
